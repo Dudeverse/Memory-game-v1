@@ -30,7 +30,7 @@ body {
   height: 100%;
   border-radius: 10px;
   background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/*  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
   cursor: pointer;
   position: relative;
   transform-style: preserve-3d;
@@ -48,6 +48,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+
 
 }
 
@@ -94,6 +95,53 @@ img {
 
 
 
+
+#my-button img {
+  width:50px;
+  height:50px;
+  position: absolute;
+  top: 10px; 
+  right: 10px;
+  border:2px solid black;
+  border-radius: 15px;  
+  z-index:9;
+}
+
+
+.highlight-wrong {
+   border: 10px solid red; /* Transparent border initially */
+  animation: glow-wro 1s infinite; /* Apply the glow animation */
+}
+
+@keyframes glow-wro {
+  0%, 100% {
+    border-color: transparent; /* Transparent border at the start and end */
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); /* Transparent shadow */
+  }
+  50% {
+    border-color: red; /* Red border in the middle of the animation */
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0); /* Glowing shadow effect */
+  }
+}
+
+
+.highlight-right {
+   border: 10px solid green; /* Transparent border initially */
+  animation: glow-matched 1s infinite; /* Apply the glow animation */
+}
+
+@keyframes glow-matched {
+  0%, 100% {
+    border-color: transparent; /* Transparent border at the start and end */
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); /* Transparent shadow */
+  }
+  80% {
+    border-color: green; /* Red border in the middle of the animation */
+    box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0); /* Glowing shadow effect */
+  }
+}
+
+
 .foreground-container {
   position: fixed;
   top: 0;
@@ -105,7 +153,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index:99;
+  z-index:2;
 }
 
 /* Style the "YOU WON!" message */
@@ -113,6 +161,27 @@ img {
   font-family: 'Monoton', cursive;
   color: white;
   font-size: 150px;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow:  0 0 40px #39ff14
+, 0 0 50px #39ff14
+;
+  }
+  
+  to {
+    text-shadow: 0 0 40px #9400d3
+, 0 0 50px #9400d3
+;
+  }
 }
 
 
@@ -145,6 +214,8 @@ button {
   border-style: outset;
 }
 
+
+
 .button1:hover {
   background-image:linear-gradient(#1E4C6B,#CE535E);
   color: white; 
@@ -157,35 +228,4 @@ button {
 
 .hidden {
   display: none;
-}
-
-.glow {
-  font-size: 80px;
-  color: #fff;
-  text-align: center;
-  animation: glow 0.7s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow:  0 0 40px #39ff14
-, 0 0 50px #39ff14
-;
-  }
-  
-  to {
-    text-shadow: 0 0 40px #9400d3
-, 0 0 50px #9400d3
-;
-  }
-}
-
-#my-button img {
-  width:50px;
-  height:50px;
-  position: absolute;
-  top: 10px; 
-  right: 10px;
-  border:2px solid black;
-  border-radius: 15px;  
 }

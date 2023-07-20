@@ -38,9 +38,9 @@ function flipCard() {
 }
 
 function checkForMatch() {
-  let firstCardImage = firstCard.querySelector('.card-front img').getAttribute('src');
-  let secondCardImage = secondCard.querySelector('.card-front img').getAttribute('src');
-  let isMatch = firstCardImage === secondCardImage;
+  let firstCardImage = firstCard.querySelector('.card-front img');
+  let secondCardImage = secondCard.querySelector('.card-front img');
+  let isMatch = firstCardImage.getAttribute('src') === secondCardImage.getAttribute('src');
 
 
   const rightMatchSound = document.getElementById('right-match-sound');
@@ -50,10 +50,33 @@ function checkForMatch() {
   if (isMatch) {
     const rightMatchSound = document.getElementById('right-match-sound');
     rightMatchSound.play();
+    
+    firstCardImage.classList.add('highlight-right');
+    secondCardImage.classList.add('highlight-right');
+
+    // After 1 second, remove the highlight class from the cards.
+    setTimeout(() => {
+      firstCardImage.classList.remove('highlight-right');
+      secondCardImage.classList.remove('highlight-right');
+    }, 750);
+
 
     disableCards();
 
   } else { 
+
+    firstCardImage.classList.add('highlight-wrong');
+    secondCardImage.classList.add('highlight-wrong');
+
+    // After 1 second, remove the highlight class from the cards.
+    setTimeout(() => {
+      firstCardImage.classList.remove('highlight-wrong');
+      secondCardImage.classList.remove('highlight-wrong');
+    }, 750);
+
+    const wrongMatchSound = document.getElementById('wrong-match-sound');
+    wrongMatchSound.play();
+
 
     unflipCards()
   }
@@ -71,16 +94,13 @@ function disableCards() {
 }
 
 function unflipCards() {
-  const wrongMatchSound = document.getElementById('wrong-match-sound');
-  wrongMatchSound.play();
-
   cards.forEach(card => card.removeEventListener('click', flipCard));
   setTimeout(() => {
     firstCard.classList.remove('flip');
     secondCard.classList.remove('flip');
     resetBoard();
     cards.forEach(card => card.addEventListener('click', flipCard));
-  }, 1000);
+  }, 1500);
 }
 
 // if count == 8:
