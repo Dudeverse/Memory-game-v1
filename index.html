@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="confetti.js"></script>
+</head>
+<body>
+
+   <div id="my-button"><a onclick="playSound()" href="https://github.com/Dudeverse"><img src="images/info.gif"></a></div>
+
+  <div class="foreground-container hidden">
+    
+    <h1 class="glow">YOU WIN!</h1>
+
+      <button id="play-again-btn" class="button button1">PLAY AGAIN</button>
+
+  </div>
+
+
+
+
+  <div class="game-board">
+<!--FOUR CARDS-->
+    <div class="card">
+      <div class="card-front"><img src="images/clown-fish.gif"></div>
+      <div class="card-back">A</div>
+    </div>
+
+    <div class="card">
+      <div class="card-front"><img src="images/clown-fish.gif"></div>
+      <div class="card-back">A</div>
+    </div>
+
+    <div class="card">
+      <div class="card-front"><img src="images/panda.gif"></div>
+      <div class="card-back">B</div>
+    </div>
+
+    <div class="card">
+      <div class="card-front"><img src="images/panda.gif"></div>
+      <div class="card-back">B</div>
+    </div>
+<!--FOUR more CARDS-->
+
+    <div class="card">
+      <div class="card-front"><img src="images/crocodile.gif"></div>
+      <div class="card-back">C</div>
+    </div>
+
+    <div class="card">
+      <div class="card-front"><img src="images/crocodile.gif"></div>
+      <div class="card-back">C</div>
+    </div>
+
+    <div class="card">
+      <div class="card-front"><img src="images/frog.gif"></div>
+      <div class="card-back">D</div>
+    </div>
+
+    <div class="card">
+      <div class="card-front"><img src="images/frog.gif"></div>
+      <div class="card-back">D</div>
+    </div>
+
+<!--FOUR more CARDS-->
+    <div class="card">
+      <div class="card-front"><img src="images/ladybug.gif"></div>
+      <div class="card-back">E</div>
+    </div>
+
+    <div class="card">
+      <div class="card-front"><img src="images/ladybug.gif"></div>
+      <div class="card-back">E</div>
+    </div>
+
+    <div class="card">
+      <div class="card-front"><img src="images/parrot.gif"></div>
+      <div class="card-back">F</div>
+    </div>
+
+    <div class="card">
+      <div class="card-front"><img src="images/parrot.gif"></div>
+      <div class="card-back">F</div>
+    </div>
+
+<!--FOUR more CARDS-->
+    <div class="card">
+      <div class="card-front"><img src="images/rabbit.gif"></div>
+      <div class="card-back">G</div>
+    </div>
+
+    <div class="card">
+      <div class="card-front"><img src="images/whale.gif"></div>
+      <div class="card-back">H</div>
+    </div>
+
+    <div class="card">
+      <div class="card-front"><img src="images/rabbit.gif"></div>
+      <div class="card-back">G</div>
+    </div>
+
+    <div class="card">
+      <div class="card-front"><img src="images/whale.gif"></div>
+      <div class="card-back">H</div>
+    </div>
+
+  </div>
+
+  <div class = "footer">
+
+    <a href="https://www.flaticon.com/free-animated-icons/zoology" title="zoology animated icons">Zoology animated icons created by Freepik - Flaticon</a> 
+    |
+    <a href="https://www.freepik.com/free-vector/game-landscape-with-tropical-plants_9816141.htm?query=cartoon%20jungle#from_view=detail_alsolike">  Image by valadzionak_volha on Freepik</a> 
+    |
+    Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6185">Pixabay</a>
+
+    Sound Effect by <a href="https://pixabay.com/users/universfield-28281460/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=126517">UNIVERSFIELD</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=126517">Pixabay</a>
+
+    <a href="https://www.flaticon.com/free-animated-icons/info" title="info animated icons">Info animated icons created by Freepik - Flaticon</a>
+
+  </div>
+
+
+
+  <script src="script.js"></script>
+
+
+<audio id="win-sound" autoplay="false" preload="auto">
+  <source src="sounds/outro.mp3" type="audio/mpeg">
+  <!-- Add other formats if needed -->
+</audio>
+
+<audio id="cheer-sound" autoplay="false" preload="auto">
+  <source src="sounds/cheers.mp3" type="audio/mpeg">
+  <!-- Add other formats if needed -->
+</audio>
+
+<audio id="card-flip-sound" autoplay="false" preload="auto">
+  <source src="sounds/flip.mp3" type="audio/mpeg">
+  <!-- Add other formats if needed -->
+</audio>
+
+<audio id="wrong-match-sound" autoplay="false" preload="auto">
+  <source src="sounds/wrong.mp3" type="audio/mpeg">
+  <!-- Add other formats if needed -->
+</audio>
+
+<audio id="right-match-sound" autoplay="false" preload="auto">
+  <source src="sounds/right1.mp3" type="audio/mpeg">
+  <!-- Add other formats if needed -->
+</audio>
+
+<audio id="replay-sound" autoplay="false" preload="auto">
+  <source src="sounds/replay.mp3" type="audio/mpeg">
+  <!-- Add other formats if needed -->
+</audio>
+
+</body>
+</html>
