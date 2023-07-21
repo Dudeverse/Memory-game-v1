@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Monoton&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memory Game</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-header.css">
 </head>
 <body>
+
+<!-----------  Loading Screen----------------------------------------------------------->
   <div id="overlay"></div>
-  <script type="text/javascript"></script>
   <script>
     window.addEventListener('load', () => {
       const overlay = document.getElementById('overlay');
       overlay.style.display = 'none'; // Hide the overlay
     });
   </script>
+<!-----------  Loading Screen----------------------------------------------------------->
 
 
+<!-----------  header ----------------------------------------------------------->
+<header> 
+    <h1>TEST YOUR MEMORY!</h1>
+  </header>
+<!-----------  header ----------------------------------------------------------->
+
+
+<!-----------  Info button ----------------------------------------------------------->
 
    <div id="my-button">
     <a onclick="playSound()" href="https://github.com/Dudeverse/Memory-game-v1" target="_blank">
       <img src="images/info.gif">
     </a>
    </div>
+<!-----------  Info Button ----------------------------------------------------------->
 
 
+<!-----------  Game over Screen----------------------------------------------------------->
 
   <div class="foreground-container hidden"> 
     <h1 class="glow">YOU WIN!</h1>
@@ -32,7 +48,11 @@
   </div>
 
 
+<!----------- Game over Screen----------------------------------------------------------->
 
+
+
+<!-----------GAME BOARD ----------------------------------------------------------->
 
   <div class="game-board">
 <!--FOUR CARDS-->
@@ -120,6 +140,10 @@
     </div>
 
   </div>
+<!-----------GAME BOARD ----------------------------------------------------------->
+
+
+<!----------- FOOTER ----------------------------------------------------------->
 
   <div class = "footer">
 
@@ -131,10 +155,12 @@
 
   </div>
 
+<!----------- FOOTER ----------------------------------------------------------->
 
 
   
 
+<!----------- AUDIO ELEMENTS ----------------------------------------------------------->
 
 <audio id="win-sound">
   <source src="sounds/outro.mp3" type="audio/mpeg">
@@ -151,7 +177,7 @@
   <!-- Add other formats if needed -->
 </audio>
 
-<audio id="wrong-match-sound"">
+<audio id="wrong-match-sound">
   <source src="sounds/wrong.mp3" type="audio/mpeg">
   <!-- Add other formats if needed -->
 </audio>
@@ -161,13 +187,18 @@
   <!-- Add other formats if needed -->
 </audio>
 
-<audio id="replay-sound"">
+<audio id="replay-sound">
   <source src="sounds/replay.mp3" type="audio/mpeg">
   <!-- Add other formats if needed -->
 </audio>
+<!----------- AUDIO ELEMENTS ----------------------------------------------------------->
+
+
+<!----------- JAVASCRIPT  ----------------------------------------------------------->
 
 <script src="confetti.js"></script>
 <script src="script.js" defer></script>
+<!----------- JAVSCRIPT ----------------------------------------------------------->
 
 </body>
 </html>

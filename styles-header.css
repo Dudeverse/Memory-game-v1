@@ -1,0 +1,37 @@
+/* styles-header.css */
+header {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: -10px;
+  width: 100%;
+  z-index: 1;
+
+  animation: dropHeader 0.7s linear forwards;
+}
+
+header h1 {
+  font-size: 100px;
+  margin: 0;
+  font-family: bangers;
+  color:#3A4C7A;
+  text-shadow: 0 0 10px white, 0 0 15px white;
+}
+
+@keyframes dropHeader {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0); /* Adjust the bounce height here */
+  }
+  70% {
+    transform: translateY(-20px); /* Adjust the bounce height here */
+  }
+  to {
+    transform: translateY(0);
+  }
+}
