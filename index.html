@@ -20,7 +20,9 @@
     window.addEventListener('load', () => {
       const overlay = document.getElementById('overlay');
       overlay.style.display = 'none'; // Hide the overlay
+      document.body.style.pointerEvents = 'auto';
     });
+    document.body.style.pointerEvents = 'none';
   </script>
 <!-----------  Loading Screen----------------------------------------------------------->
 
